@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading and Specificity</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .para{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cascading and Specificity</h1>
+    <ol>
+        <li>1. Position and order of appearance: the browser applies the styles appearing at the end</li>
+        <li>Origin:
+            <ul>
+                <li>User Agent Style: these styles are the once thatbare applied by your browser by default</li>
+                <li>Local User Style: these styles are applied by the operating system</Style></li>
+                <li>Authored CSS: the css file that you have written</li>
+                <li>Authored CSS! Important</li>
+                <li>Local User Style! Important</li>
+                <li>User Agent Style! Important</li>
+            </ul>
+        </li>
+        <li>Specificity: The algo which tells which selectors has more priority basedon the specificity score</li>
+        <li>!important: highest priority</li>
+    </ol>
+    <p class="para" id="para-id" style="color: pink; background-color: yellow;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam in itaque alias assumenda voluptates pariatur nihil eos cumque, maxime temporibus ut placeat ipsam, consequatur aliquam unde consequuntur voluptatibus debitis sed culpa tempore doloremque autem obcaecati mollitia! Dicta, aliquid. Recusandae architecto aliquid error ipsum voluptate quidem! Assumenda eius ipsum laboriosam nobis voluptatum nisi obcaecati. Corrupti quos rerum natus, numquam voluptatem neque dicta sunt ut, incidunt ea itaque. Quae doloribus inventore facilis cum accusantium fuga a minus quaerat sed dignissimos? Atque, reprehenderit nemo cumque blanditiis eveniet sunt adipisci ea cupiditate ipsam pariatur libero provident? Dolor, totam soluta aliquam aut culpa iure ducimus.</p>
+    <a href="#">Link</a>
+    <style>
+        #para-id{
+            color: orange;
+        }
+    </style> 
+</body>
+</html>

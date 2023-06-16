@@ -1,0 +1,102 @@
+/* Question
+if device-width > 800px make color of text in Blue
+else make the color of the text in Red
+*/
+
+/* answer
+ @media (typeof device) also (expressions) {
+    //regular CSS code
+} */
+
+/* @media screen {
+    div{
+        color: red;
+    }
+}
+
+@media print{
+    div{
+        color: blue;
+    }
+} */
+
+/* @media all{
+    div{
+        color: blueviolet;
+    }
+} */
+
+/* max width & min width */
+/* @media all and (min-width:500px){}
+    div{
+        font-size: 20px;
+    }
+} */
+/* orientation => landscape and portrait */
+/* width > height => landscape
+width < height => portrait */
+
+/* @media (orientation : landscape){
+    div{
+        color: red;
+    }
+}
+
+@media (orientation : portrait){
+    div{
+        color: blue;
+    }
+} */
+/* 
+.container{
+    padding: 20px;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.item{
+    background-color: white;
+    padding: 50px;
+}
+.item3{
+    grid-column: 1/-1;
+}
+
+/* screenwidth < 800px */
+/* @media (max-width : 800px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}  */
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu{
+    display: none !important;
+}
+
+@media (max-width: 700px){
+    a{
+        display: none;
+    }
+    .menu{
+        display: block !important;
+    }
+}
+
+/* relative unit: em, rem, vw, vh, %
+absolute unit: px, cm, mm, pt */

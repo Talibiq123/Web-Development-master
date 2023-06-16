@@ -1,0 +1,70 @@
+/* Decendent Selector ( space )*/
+/* div .para{
+    color: red;
+}
+
+.container #para-1{
+    color: blue;
+}
+
+ul li{
+    background-color: pink;
+} */
+
+/* Child selector ( > ) */
+/* div > p {
+    color: palevioletred;
+} */
+
+/* Adjacent Sibling Selector (+) */
+/* div + p{
+    color: red;
+} */
+
+/* General sibling Selector (~) */
+div ~ p{
+    color: orange;
+}
+
+/* Pseudo Class Selectors */
+.btn{
+    background-color: orange;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+.btn:hover{
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+}
+
+/* works only with anchor tag */
+/* unvisited link */
+.link:link{
+    color: blue;
+}
+a:visited{
+    color: blueviolet;
+}
+/* visited link */
+.link:active{
+    color: orangered;
+}
+
+/* Pseudo-element Selectors */
+p::first-line{
+    color: black;
+}
+
+/* p::first-letter{
+    color:green;
+} */
+
+/* p::before{
+    content: "_____before_____";
+}
+
+p::after{
+    content: "_____after_____";
+} */

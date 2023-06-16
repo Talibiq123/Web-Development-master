@@ -1,0 +1,26 @@
+.test{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    font-size: 30px;
+    position: absolute;
+}
+
+.test1{
+    z-index: 1;
+}
+
+.test2{
+    background-color: yellow;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.test3{
+    background-color: red;
+    top: 100px;
+    left: 100px;
+    z-index: 0;
+}
+/* we can apply z-index only when position of a perticular element is non static */

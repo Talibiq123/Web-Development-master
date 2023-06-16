@@ -1,0 +1,98 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    padding: 20px;
+    /* background-color: #ccc; */
+}
+
+.input-container{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.input-container > input, input-group > input{
+    border: 1px solid #808080;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.grid-item{
+    padding: 10px;
+}
+
+.material-icons{
+    color: #808080;
+    font-size: 10px !important;
+}
+
+.input-group{
+    display: flex;
+    position: relative;
+}
+
+.input-group > input{
+    flex-grow: 1;
+    padding-left: 50px;
+}
+
+.input-group > label{
+    position: absolute;
+    top: 2px; 
+    left: 5px;
+}
+
+.input-group > button right-button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 10px;
+    background-color: white;
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
+
+.search-icon{
+    font-size: 16px !important;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+.search-container{
+    position: relative;
+}
+
+.search-container > input{
+    padding-left: 30px;
+}
+
+.card-button{
+    width: 35%;
+}
+
+.input-group > .left-button{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    padding: 0 15px;
+    background-color: white;
+}
+
+.card-input{
+    width: 100%;
+    /* border: 1px solid red; */
+    border: 1px solid;
+}
+
+.card-button > .left-button, .card-button > .right-button{
+    margin: 2px;
+    border: none;
+}
+
+
+
+
+

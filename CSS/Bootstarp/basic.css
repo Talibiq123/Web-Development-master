@@ -1,0 +1,48 @@
+.media::after{
+    content: 'xs';
+    display: block;
+    font-size: 40px;
+    color: blue;
+    font-weight: bold;
+}
+
+.test{
+    background-color: #563D7C;
+    height: 50px;
+    border: 2px solid white;
+    color: white;
+}
+
+/* .container{
+    border: 2px solid blue;
+} */
+
+@media (min-width: 576px){
+    .media::after{
+        content: 'sm';
+    }
+}
+
+@media (min-width: 768px){
+    .media::after{
+        content: 'md';
+    }
+}
+
+@media (min-width: 992px){
+    .media::after{
+        content: 'lg';
+    }
+}
+
+@media (min-width: 1200px){
+    .media::after{
+        content: 'xl';
+    }
+}
+
+@media (min-width: 1400px){
+    .media::after{
+        content: 'xxl';
+    }
+}

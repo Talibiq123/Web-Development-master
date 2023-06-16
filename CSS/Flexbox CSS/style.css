@@ -1,0 +1,25 @@
+.flex-container{
+    border: 2px solid blue;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+    height: 400px;
+}
+
+.flex-item{
+    /* border: 2px solid red; */
+    background-color: blue;
+    padding: 50px;
+    color: white;
+}
+
+/* Justify-contain: main axis;
+
+align-item
+align-self
+align-content
+
+:cross axis
+*/

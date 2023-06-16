@@ -1,0 +1,39 @@
+/* Universal Selector - 0*/
+*{
+    color: red;
+}
+
+/* Class Selector - 10 */
+.para{
+    color: pink;
+}
+
+/* Pseudo Class Selector - 10 */
+:hover{
+    color: aqua;
+}
+
+a[href="#"]{
+    color: red;
+}
+/* tag selector - 1 */
+p{
+    color: blue;
+}
+
+/* Pseudo Element Selectors - 1 */
+p::first-line{
+    color: green;
+}
+
+#para-id::first-line{
+    color: red;
+}
+
+/* Specificity - 100 */
+#para-id{
+    /* Specificity - 10000 */
+    color: blueviolet!important;
+    /*Specificity - 100   */
+    background-color: pink;
+}
