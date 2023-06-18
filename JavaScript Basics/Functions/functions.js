@@ -18,3 +18,41 @@ sum(20);
 //because for same inputs values it gives different output
 c = 15;
 sum(20);
+
+
+//Function declaration: creting a function
+// function func_name() {
+
+// }
+// func_name();
+
+function pritnName() {
+    console.log("Name: ", "Talib");
+}
+pritnName();
+
+//function taking arguments
+function printFUllName(a, b) {
+    return a + b;
+}
+let name = printFUllName("Mohd ", "Talib");
+console.log(`The full name is : ${name}`); //(`) grave accent symbol
+
+// String Interpolation (Joining multiple strings)
+let x = 1;
+let y = 2;
+console.log(x + " " + y);
+console.log(`This is the name : ${x} ${y}`); //(`) grave accent symbol
+
+//Function Expression
+let funcVar = 10;
+console.log(funcVar);
+let func = function() { //Anonymous function
+    console.log("func declaration");
+}
+func(); //Anonymous
+//console.log(func);
+
+
+
+
