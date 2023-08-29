@@ -97,4 +97,94 @@ myApp();
 
 // block scope vs function scope
 // let and const are block scope
+
+{
+    let firstName = "Mohd";
+    const lastName = "Talib";
+    // console.log(firstName, lastName);
+}
+// console.log(firstName, lastName); //Error
+
 // var is function scope
+{
+    var middleName = "Talib";
+}
+// console.log(middleName);
+
+
+// default parameters
+function addTwo(a, b=0) {
+    // console.log(a+b);
+}
+addTwo(2, 4);
+
+
+// rest parameters
+function myFunc1(a, b, ...c) {
+    // console.log(`a is ${a} and b is ${b}`);
+    // console.log(`c is ${c}`);
+};
+
+myFunc1(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+function addAll(...numbers) {
+    let sum = 0;
+    for ( let number of numbers ) {
+        sum = sum + number;
+    }
+    return sum;
+}
+
+let result = addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+// console.log(result);
+
+
+// parameter destructuring
+// most commonly used in react
+const persom = {
+    name: 'John',
+    age: 37
+}
+ 
+// function printDetails(obj) {
+//     console.log(persom.name);
+//     console.log(persom.age);
+// }
+
+// printDetails(persom);
+
+
+function printDetails({name, age}) {
+    // console.log(name);
+    // console.log(age);
+};
+
+printDetails(persom);
+
+
+// function callback
+function myfunc2(name) {
+    // console.log("Inside myFunc2");
+    // console.log(`My name is ${name}`);
+}
+
+function myFunct3(callback) {
+    // console.log(a);
+    // console.log("Inside myFunc3");
+    callback("John");
+}
+
+myFunct3(myfunc2);
+
+
+
+// function returning functions
+function myfunc4() {
+    function myfunc5() {
+        console.log("Hello, world!");
+    }
+    return myfunc5;
+}
+
+let result1 = myfunc4();
+result1();
