@@ -145,3 +145,134 @@
 
 
 // const allButtons = document.querySelectorAll(".my-buttons button");
+
+
+
+
+
+// keypress Event
+// const body = document.body;
+// body.addEventListener("keypress",(e) =>{
+//         console.log(e.key);
+// })
+
+
+// mouseover event
+// const body = document.body;
+// body.addEventListener("mouseover",(e) =>{
+//         console.log(e.target);
+// });
+
+// const mainButton = document.querySelector(".btn-headline");
+// mainButton.addEventListener("mouseover",() => {
+//         console.log("mouseover event occured!!!");
+// })
+
+// mouseleave event
+// const mainButton = document.querySelector(".btn-headline");
+// mainButton.addEventListener("mouseleave",() => {
+//         console.log("mouseleave event occured!!!");
+// })
+
+
+
+
+// console.log("Hello, world!");
+// const grandparent = document.querySelector(".grandparent");
+// const parent = document.querySelector(".parent");
+// const child = document.querySelector(".child");
+
+// event bubbling/ event propagation
+// console.log("Event Bubbling or Event Propagation");
+// console.log("\n");
+// grandparent.addEventListener("click", () => {
+//         console.log("you clicked on Grandparent!!!");
+// });
+// parent.addEventListener("click", () => {
+//         console.log("you clicked on Parent!!!");
+// });
+// child.addEventListener("click", () => {
+//         console.log("you clicked on Child!!!");
+// });
+// document.body.addEventListener("click", () => {
+//         console.log("you clicked on Body!!!");
+// });
+
+
+// event capturing
+// grandparent.addEventListener("click", () => {
+//         console.log("capture !!! Grandparent!!!");
+// }, true);
+// parent.addEventListener("click", () => {
+//         console.log("capture !!! Parent!!!");
+// }, true);
+// child.addEventListener("click", () => {
+//         console.log("capture !!! Child!!!");
+// }, true);
+// document.body.addEventListener("click", () => {
+//         console.log("capture !!! Body!!!");
+// }, true);
+
+// grandparent.addEventListener("click", () => {
+//         console.log("you clicked on Grandparent!!!");
+// });
+// parent.addEventListener("click", () => {
+//         console.log("you clicked on Parent!!!");
+// });
+// child.addEventListener("click", () => {
+//         console.log("you clicked on Child!!!");
+// });
+// document.body.addEventListener("click", () => {
+//         console.log("you clicked on Body!!!");
+// });
+
+
+// Event Delegation: Event delegation is a design pattern in JavaScript where you attach a single event listener to a parent element,
+// rather than attaching multiple event listeners to individual child elements. This parent element then handles events that bubble up
+// from its child elements.Event delegation is particularly useful when dealing with a large number of child elements or dynamically
+// generated content.
+
+// const grandparent = document.querySelector(".grandparent");
+// grandparent.addEventListener("click", (e) => {
+//         console.log(e.currentTarget);
+// })
+
+
+// todo form in html
+// const todoForm = document.querySelector(".form-todo");
+// todoForm.addEventListener("submit", (e) => {
+//         e.preventDefault();
+//         console.log("form submitted");
+// })
+
+
+const todoForm = document.querySelector(".form-todo");
+const todoInput = document.querySelector(".form-todo input[type='text']");
+const todoList = document.querySelector(".todo-list");
+
+todoForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const newTodoText = todoInput.value;
+  const newLi = document.createElement("li");
+  const newLiInnerHtml = `
+        <span class="text">${newTodoText}</span>
+        <div class="todo-buttons">
+            <button class="todo-btn done">Done</button>
+            <button class="todo-btn remove">Remove</button>
+        </div>`;
+  newLi.innerHTML = newLiInnerHtml;
+  todoList.append(newLi);
+  todoInput.value = "";
+});
+
+todoList.addEventListener("click", (e) => {
+  // check if user clicked on done button
+  if (e.target.classList.contains("remove")) {
+    const targetedLi = e.target.parentNode.parentNode;
+    targetedLi.remove();
+  }
+  if (e.target.classList.contains("done")) {
+    const liSpan = e.target.parentNode.previousElementSibling;
+    liSpan.style.textDecoration = "line-through";
+  }
+});
