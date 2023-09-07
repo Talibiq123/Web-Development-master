@@ -74,20 +74,51 @@
 // xhr.send();
 
 
+// const url = 'https://jsonplaceholder.typicode.com/posts';
+// const xhr = new XMLHttpRequest();
+// xhr.open('GET', url);
+// xhr.onload = () => {
+//     if (xhr.status >= 200 && xhr.status < 300) {
+//         const data = JSON.parse(xhr.response);
+//         console.log(data);
+//     } else {
+//         console.log("Something went wrong");
+//     }
+// }
+
+// xhr.onerror = () => {
+//     console.log("network error");
+// };
+
+// xhr.send();
+
+
+
 const url = 'https://jsonplaceholder.typicode.com/posts';
-const xhr = new XMLHttpRequest();
-xhr.open('GET', url);
-xhr.onload = () => {
-    if (xhr.status >= 200 && xhr.status < 300) {
-        const data = JSON.parse(xhr.response);
-        console.log(data);
-    } else {
-        console.log("Something went wrong");
-    }
+
+function sendRequest(method, url) {
+    return new Promise( function(resolve, reject) {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.responseText);
+            } else {
+                reject(new Error("Something went wrong"));
+            }
+        }
+        xhr.onerror = function() {
+            reject(new Error("Something went wrong"));
+        }
+        xhr .send();
+    })
 }
 
-xhr.onerror = () => {
-    console.log("network error");
-};
+// const whatIsThis = sendRequest("GET", url);
+// console.log(whatIsThis);
 
-xhr.send(); 
+sendRequest("GET", url)
+.then(reponse => {
+    const data = JSON.parse(reponse);
+    console.log(data);
+})

@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the height of the body to the viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+.center-div {
+    text-align: center; /* Center the text inside the div */
+    border: 3px solid red; /* Add a border for visualization */
+    padding: 20px; /* Add some padding for spacing */
+    background: black;
+    color: white;
+}
